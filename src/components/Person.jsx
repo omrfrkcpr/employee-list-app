@@ -14,86 +14,96 @@ const Person = () => {
   };
 
   return (
-    <div
-      style={{
-        textAlign: "center",
-        margin: "5rem",
-        border: "1px solid lightgrey",
-        padding: "0.5rem 2rem",
-        backgroundColor: "whitesmoke",
-      }}
-    >
-      {data.map(
-        ({ name, email, image, id, cv, salary }) =>
-          name === username && (
-            <div key={id}>
-              <img src={image} alt="" />
-              <h3 style={{ textDecoration: "underline" }}>{name}</h3>
-              <div style={{ display: "flex", justifyContent: "center" }}>
-                <h3>
-                  Salary :{" "}
-                  <span style={{ color: "red" }}>
-                    {money === "en" && "$"}
-                    {money === "en"
-                      ? salary
-                      : salary * exchangeRateFromDollarToEuro}
-                    {money === "de" && "€"}
-                  </span>
-                </h3>
-                <select
-                  value={money}
-                  onChange={handleMoneyChange}
+    <main>
+      <section
+        className="container"
+        style={{
+          textAlign: "center",
+          margin: "5rem auto",
+          border: "1px solid lightgrey",
+          padding: "0.5rem 2rem",
+          backgroundColor: "whitesmoke",
+        }}
+      >
+        {data.map(
+          ({ name, email, image, id, cv, salary }) =>
+            name === username && (
+              <div key={id}>
+                <img src={image} alt="" />
+                <h3 style={{ textDecoration: "underline" }}>{name}</h3>
+                <div
                   style={{
-                    height: "25px",
-                    marginLeft: ".5rem",
-                    outline: "none",
+                    display: "flex",
+                    justifyContent: "center",
+                    margin: "1rem 0",
+                  }}
+                >
+                  <h3>
+                    Salary :{" "}
+                    <span style={{ color: "red" }}>
+                      {money === "en" && "$"}
+                      {money === "en"
+                        ? salary
+                        : salary * exchangeRateFromDollarToEuro}
+                      {money === "de" && "€"}
+                    </span>
+                  </h3>
+                  <select
+                    value={money}
+                    onChange={handleMoneyChange}
+                    style={{
+                      height: "25px",
+                      marginLeft: ".5rem",
+                      outline: "none",
+                      border: "none",
+                      borderRadius: "10px",
+                    }}
+                  >
+                    <option selected value="en">
+                      💵Dollar
+                    </option>
+                    <option value="de">💶Euro</option>
+                  </select>
+                </div>
+                <h4
+                  style={{
+                    width: "60%",
+                    margin: "1rem auto",
+                    backgroundColor: "white",
+                  }}
+                >
+                  <a href={`mailto:${email}`}>{email}</a>
+                </h4>
+                <h5 style={{ fontFamily: "italic" }}>
+                  <span
+                    style={{
+                      color: "orange",
+                      fontWeight: "bolder",
+                      textDecoration: "underline",
+                    }}
+                  >
+                    CV:
+                  </span>{" "}
+                  {cv}
+                </h5>
+                <button
+                  onClick={() => navigate(-1)}
+                  style={{
+                    padding: "0.2rem 0.7rem",
                     border: "none",
+                    backgroundColor: "green",
+                    color: "white",
                     borderRadius: "10px",
+                    cursor: "pointer",
                   }}
                 >
-                  <option selected value="en">
-                    💵Dollar
-                  </option>
-                  <option value="de">💶Euro</option>
-                </select>
+                  GO HOME
+                </button>
               </div>
-              <h4
-                style={{
-                  width: "60%",
-                  margin: "auto",
-                  backgroundColor: "white",
-                }}
-              >
-                <a href={`mailto:${email}`}>{email}</a>
-              </h4>
-              <h5 style={{ fontFamily: "italic" }}>
-                <span
-                  style={{
-                    color: "orange",
-                    fontWeight: "bolder",
-                    textDecoration: "underline",
-                  }}
-                >
-                  CV:
-                </span>{" "}
-                {cv}
-              </h5>
-              <button
-                onClick={() => navigate(-1)}
-                style={{
-                  padding: "0.2rem 0.7rem",
-                  border: "none",
-                  backgroundColor: "green",
-                  color: "white",
-                  borderRadius: "10px",
-                }}
-              >
-                GO HOME
-              </button>
-            </div>
-          )
-      )}
-    </div>
+            )
+        )}
+      </section>
+    </main>
   );
 };
 
