@@ -19,10 +19,12 @@ const Person = () => {
         className="container"
         style={{
           textAlign: "center",
-          margin: "5rem auto",
           border: "1px solid lightgrey",
           padding: "0.5rem 2rem",
           backgroundColor: "whitesmoke",
+          height: "838px",
+          display: "flex",
+          alignItems: "center",
         }}
       >
         {data.map(
@@ -74,7 +76,7 @@ const Person = () => {
                 >
                   <a href={`mailto:${email}`}>{email}</a>
                 </h4>
-                <h5 style={{ fontFamily: "italic" }}>
+                <h5>
                   <span
                     style={{
                       color: "orange",
@@ -89,7 +91,7 @@ const Person = () => {
                 <button
                   onClick={() => navigate(-1)}
                   style={{
-                    padding: "0.2rem 0.7rem",
+                    padding: "0.4rem 0.7rem",
                     border: "none",
                     backgroundColor: "green",
                     color: "white",
