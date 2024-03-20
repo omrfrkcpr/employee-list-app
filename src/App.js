@@ -1,7 +1,11 @@
-import React from 'react';
+import React, { useState } from 'react';
 import List from './components/List';
+import data from './helper/data';
 
 function App() {
+  const [employees, setEmployees] = useState(data);
+  // console.log(data);
+  
  
   return (
     <main>
@@ -10,7 +14,7 @@ function App() {
         <h5>
           (Employees 1 to 5)
         </h5>
-        <List />
+        <List employees={employees} />
         <div className='btns'>
           <button >Prev</button>
           <button >Next</button>
