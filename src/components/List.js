@@ -1,7 +1,12 @@
 import React from "react";
+import { RiFileInfoLine } from "react-icons/ri";
+import { useNavigate } from "react-router-dom";
+
 
 const List = ({employees}) => {
   console.log(employees);
+
+  const navigate = useNavigate()
   
  
   return (
@@ -12,8 +17,13 @@ const List = ({employees}) => {
         <img src={image} alt={name} />
         <div>
           <h4>{name}</h4>
+
+          <button onClick={()=> navigate('/Person', {state:{id,name,age, image, email}}) }><RiFileInfoLine 
+          style={{fontSize:'20px', width:'45px'}}/></button>
+          
           <p>{email}</p>
           <p>{age} years</p>
+          
         </div>
       </article>
     ))}
