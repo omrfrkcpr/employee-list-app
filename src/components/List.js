@@ -18,7 +18,7 @@ const List = ({employees}) => {
         <div>
           <h4>{name}</h4>
 
-          <button onClick={()=> navigate('/Person', {state:{id,name,age, image, email}}) }><RiFileInfoLine 
+          <button onClick={()=> navigate(`/Person/${name}`, {state:{id,name,age, image, email}}) }><RiFileInfoLine 
           style={{fontSize:'20px', width:'45px'}}/></button>
           
           <p>{email}</p>
