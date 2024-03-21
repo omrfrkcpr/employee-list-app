@@ -21,6 +21,7 @@ const List = ({ employees }) => {
                   state: { id, name, age, image, email, cv, salary },
                 })
               }
+              style={{ cursor: "pointer" }}
             >
               <RiFileInfoLine style={{ fontSize: "20px", width: "45px" }} />
             </button>
