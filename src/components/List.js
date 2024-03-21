@@ -16,11 +16,7 @@ const List = ({ employees }) => {
             <h4>{name}</h4>
 
             <button
-              onClick={() =>
-                navigate(`/${name}`, {
-                  state: { id, name, age, image, email, cv, salary },
-                })
-              }
+              onClick={() => navigate(`/${name}`)}
               style={{ cursor: "pointer" }}
             >
               <RiFileInfoLine style={{ fontSize: "20px", width: "45px" }} />
