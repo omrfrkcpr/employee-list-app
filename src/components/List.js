@@ -17,7 +17,7 @@ const List = ({ employees }) => {
 
             <button
               onClick={() =>
-                navigate(`/Person/${name}`, {
+                navigate(`/${name}`, {
                   state: { id, name, age, image, email, cv, salary },
                 })
               }
