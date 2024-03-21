@@ -3,7 +3,7 @@ import List from "./List";
 import data from "../helper/data";
 
 function Home() {
-  const [employees, setEmployees] = useState(data);
+  const [employees] = useState(data);
   // console.log(data);
   const [from, setFrom] = useState(1);
   const [to, setTo] = useState(5);
