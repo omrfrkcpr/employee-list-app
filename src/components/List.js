@@ -9,7 +9,7 @@ const List = ({ employees }) => {
 
   return (
     <>
-      {employees.map(({ id, name, age, image, email, cv, salary }) => (
+      {employees.map(({ id, name, age, image, email }) => (
         <article key={id} className="person">
           <img src={image} alt={name} />
           <div>
