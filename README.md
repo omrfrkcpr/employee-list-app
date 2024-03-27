@@ -76,7 +76,7 @@ A single-page application that displays employees in groups of 5, page by page, 
 │    ┣ 📜index.js
 │    ┗ 📜index.scss
 ├── .gitignore
-├── employee.gif
+├── employee-list-app.gif
 ├── LICENSE
 ├── package.json
 ├── README.md
