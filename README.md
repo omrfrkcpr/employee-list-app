@@ -6,6 +6,8 @@
 
 A single-page application that displays employees in groups of 5, page by page, with interactive transitions between pages with buttons, and when each employee is clicked, detailed information about the employee is displayed.
 
+**_NOTE = This project emerged as a result of team work. You can see the contributors in the Contributors section._**
+
 ## Outcome
 
 ## Project Planning & Management
