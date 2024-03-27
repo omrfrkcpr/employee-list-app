@@ -10,6 +10,8 @@ A single-page application that displays employees in groups of 5, page by page, 
 
 ## Outcome
 
+![employee-list-app](https://github.com/omrfrkcpr/employee-list-app/assets/77440899/ea578191-d3f3-48fa-b517-fb2ce31db796)
+
 ## Project Planning & Management
 
 **Epic User Story:** Employee List Application 🎖️
